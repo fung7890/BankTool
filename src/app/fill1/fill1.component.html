@@ -1,9 +1,17 @@
-<div *ngIf="selectedTopic">
-  <p>
-    
-    chickenbutt
-  </p>
-</div>
 
 <div>
-  
+
+  <ul class="list-group">
+      <button class="list-group-item" *ngFor="let topic of topics"
+         [routerLink] = "[topic.id]"> {{topic.title}}
+      </button>
+    </ul>
+
+  <router-outlet></router-outlet>
+
+  <!-- <div *ngIf="topic.id === introduction1">
+    <h1> CONDITIONAL WORKS </h1>
+  </div> -->
+
+</div>
+

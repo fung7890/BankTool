@@ -1,4 +1,3 @@
-
 import { Component, OnInit, Input } from '@angular/core';
 import { OverviewComponent } from './../overview/overview.component';
 import { ActivatedRoute} from '@angular/router';
@@ -7,11 +6,12 @@ import { TopicsService } from './../topics.service';
 import { ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
-  selector: 'app-fill1',
-  templateUrl: './fill1.component.html',
-  styleUrls: ['./fill1.component.css']
+  selector: 'app-fill2',
+  templateUrl: './fill2.component.html',
+  styleUrls: ['./fill2.component.css']
 })
-export class Fill1Component implements OnInit {
+
+export class Fill2Component implements OnInit {
   activatedRoute: ActivatedRoute;
   topicsService: TopicsService;
 
@@ -25,8 +25,7 @@ export class Fill1Component implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(
       (params) => {
-        this.topics = this.topicsService.getTopics(params.subject);
-
+        this.topics = this.topicsService.getIDs(params.id);
       }
     );
 

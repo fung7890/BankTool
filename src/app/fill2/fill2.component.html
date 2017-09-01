@@ -1,0 +1,20 @@
+
+<div>
+
+  <ul class="list-group">
+      <button class="list-group-item" *ngFor="let topic of topics">
+          {{topic.content}}
+
+          <div *ngIf="topic.id === 'introduction1'">
+          <h1> CONDITIONAL WORKS </h1>
+          <textarea class="input"></textarea>
+           </div>
+
+
+
+      </button>
+    </ul>
+
+
+
+</div>
