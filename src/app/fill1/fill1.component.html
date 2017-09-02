@@ -1,17 +1,21 @@
 
-<div>
 
-  <ul class="list-group">
-      <button class="list-group-item" *ngFor="let topic of topics"
-         [routerLink] = "[topic.id]"> {{topic.title}}
-      </button>
+
+
+  <md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav" align="end" mode = "push">
+        <router-outlet></router-outlet>
+    </md-sidenav >
+
+    <div class="adjust">
+    <ul>
+        <button class="list-group-item" type="button"
+        md-button (click)="sidenav.open()" *ngFor="let topic of topics"
+          [routerLink] = "[topic.id]"
+          > {{topic.title}}
+        </button>
     </ul>
+    </div>
 
-  <router-outlet></router-outlet>
-
-  <!-- <div *ngIf="topic.id === introduction1">
-    <h1> CONDITIONAL WORKS </h1>
-  </div> -->
-
-</div>
+  </md-sidenav-container>
 

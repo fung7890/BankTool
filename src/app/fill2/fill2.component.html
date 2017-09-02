@@ -1,8 +1,9 @@
 
-<div>
 
-  <ul class="list-group">
-      <button class="list-group-item" *ngFor="let topic of topics">
+
+<div id="details-wrapper" >
+  <ul >
+      <h1 *ngFor="let topic of topics">
           {{topic.content}}
 
           <div *ngIf="topic.id === 'introduction1'">
@@ -10,11 +11,6 @@
           <textarea class="input"></textarea>
            </div>
 
-
-
-      </button>
+      </h1>
     </ul>
-
-
-
 </div>

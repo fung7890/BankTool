@@ -1,12 +1,12 @@
 #sidebar-wrapper {
   top: 0;
-  left: -200px;
+  left: 0;
   width: 200px;
   background-color: #01238E;
   color: white;
   position: fixed;
   height: 100%;
-  z-index: 1;
+
 }
 .sidebar-nav {
   position: absolute;
@@ -30,29 +30,7 @@
   color: white;
   text-decoration: none;
 }
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
-  text-decoration: none;
-}
-.sidebar-toggle h1 {
-  top: 20px;
-  text-indent: 20px;
-  font-size: large;
-  font-weight: bold;
-}
 
 
-#sidebar-wrapper.sidebar-toggle {
-  transition: all 0.3s ease-out;
-  margin-left: -200px;
-}
-@media (min-width: 768px) {
-  #sidebar-wrapper.sidebar-toggle {
-    transition: 0s;
-    left: 200px;
-  }
 
-#header-wrapper{
-  margin-left: -200px;
-}
 
-}

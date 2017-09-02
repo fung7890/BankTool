@@ -9,6 +9,8 @@ import { OverviewComponent } from './overview/overview.component';
 import { Fill1Component } from './fill1/fill1.component';
 import { TopicsService } from './topics.service';
 import { Fill2Component } from './fill2/fill2.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MdSidenavModule } from '@angular/material';
 
 
 const routes = [
@@ -31,7 +33,9 @@ const routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     HttpModule,
+    MdSidenavModule,
     RouterModule.forRoot(routes)
   ],
   providers: [TopicsService],

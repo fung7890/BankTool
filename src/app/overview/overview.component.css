@@ -4,12 +4,10 @@
     color: white;
   }
   .topics {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
+    height: 50px;
+
   }
-  .topics li {
+.topics li {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -46,3 +44,10 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
+
+.adjust{
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+}

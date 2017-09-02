@@ -1,0 +1,25 @@
+.list-group-item{
+  padding: 10px;
+}
+.example-container {
+  position: fixed;
+  height: 100%;
+  min-height: 100%;
+  width: 92%;
+  min-width: 80%;
+}
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 400px;
+}
+
+.adjust{
+  position: relative;
+  top: 30px;
+}
