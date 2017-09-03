@@ -1,51 +1,77 @@
-
 <div id="details-wrapper" >
-  <ul >
-      <h1 *ngFor="let topic of topics; let index=index;">
-          <h2 class="text">{{topic.content1}}</h2>
-
-          <!-- make conditional as a list so we can have the same html outline for multiple -->
-          <div *ngIf="topic.id === '0'">
-            <h1> CONDITIONAL WORKS </h1>
-            <textarea class="input" id="message"
-            (keyup.enter)="Send($event.target.value, topic.id)" >{{(c0 | async)?.content}}</textarea>
-          </div>
-
-          <div *ngIf="topic.id === '1'">
-          <h1> CONDITIONAL WORKS </h1>
-          <textarea class="input" id="message"
-          (keyup.enter)="Send($event.target.value, topic.id)">{{(c1 | async)?.content}}</textarea>
-            </div>
-
-      </h1>
-    </ul>
-
-</div>
-
-
-
-<!-- <div id="details-wrapper" >
     <ul >
         <h1 *ngFor="let topic of topics">
             <h2 class="text">{{topic.content1}}</h2>
 
-            make conditional as a list so we can have the same html outline for multiple
-            <div *ngIf="topic.id === '0'">
-              <h1> CONDITIONAL WORKS </h1>
-              <textarea class="input" id="message"
-              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c0 | async)?.content}}</textarea>
-            </div>
+            <div *ngIf="topic.id === '0'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c0 | async)?.content}}</textarea></div>
 
-            <div *ngIf="topic.id === '1'">
-            <h1> CONDITIONAL WORKS </h1>
-            <textarea class="input" id="message"
-            (keyup.enter)="Send($event.target.value, topic.id)">{{(c1 | async)?.content}}</textarea>
-              </div>
+            <div *ngIf="topic.id === '1'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c1 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '2'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c2 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '3'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c3 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '4'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c4 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '5'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c5 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '6'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c6 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '7'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c7 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '8'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c8 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '9'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c9 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '10'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c10 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '11'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c11 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '12'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c12 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '13'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c13 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '14'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c14 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '15'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c15 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '16'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c16 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '17'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c17 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '18'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c18 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '19'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c19 | async)?.content}}</textarea></div>
+
+            <div *ngIf="topic.id === '20'"><textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)">{{(c20 | async)?.content}}</textarea></div>
+
+
 
         </h1>
       </ul>
 
-  </div> -->
+  </div>
 
 
 

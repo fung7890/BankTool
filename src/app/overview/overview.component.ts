@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output  } from '@angular/core';
 
 
 @Component({
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
+
+  @Output() changed = new EventEmitter<boolean>();
+
 
   subjects = [
     'introduction',
@@ -23,6 +26,9 @@ export class OverviewComponent implements OnInit {
 
   }
 
+  onChange(){
+    console.log('toggled');
+  }
 
 
 }
