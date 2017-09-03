@@ -5,21 +5,28 @@
   position: fixed;
   height: 100%;
   min-height: 100%;
-  width: 92%;
-  min-width: 80%;
+  width: 90%;
+  left: 200px;
+
 }
 .example-sidenav-content {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
+
 }
 
 .example-sidenav {
-  padding: 400px;
+  padding: 48%;
 }
 
 .adjust{
   position: relative;
   top: 30px;
+}
+
+.back{
+  position: absolute;
+  z-index:1;
 }

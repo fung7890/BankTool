@@ -8,12 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
+  subjects = [
+    'introduction',
+    'team',
+    'environment',
+    'marketing',
+    'operation',
+    'finance',
+    'risk'
+  ];
   constructor(){}
 
   ngOnInit() {
-   
+
   }
 
- 
+
 
 }

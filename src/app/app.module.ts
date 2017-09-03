@@ -11,6 +11,12 @@ import { TopicsService } from './topics.service';
 import { Fill2Component } from './fill2/fill2.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MdSidenavModule } from '@angular/material';
+import { MaterialModule } from '@angular/material';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
 
 
 const routes = [
@@ -21,6 +27,15 @@ const routes = [
   ]},
   {path: '**', redirectTo: '/overview'}
 ];
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyA31es21lsPyEv28tyHddywuQ_6njhwUVc',
+  authDomain: 'banktool-de3c2.firebaseapp.com',
+  databaseURL: 'https://banktool-de3c2.firebaseio.com',
+  projectId: 'banktool-de3c2',
+  storageBucket: '',
+  messagingSenderId: '960923219494'
+};
 
 @NgModule({
   declarations: [
@@ -36,7 +51,11 @@ const routes = [
     BrowserAnimationsModule,
     HttpModule,
     MdSidenavModule,
-    RouterModule.forRoot(routes)
+    MaterialModule,
+    RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [TopicsService],
   bootstrap: [AppComponent]

@@ -1,16 +1,51 @@
 
-
-
 <div id="details-wrapper" >
   <ul >
-      <h1 *ngFor="let topic of topics">
-          {{topic.content}}
+      <h1 *ngFor="let topic of topics; let index=index;">
+          <h2 class="text">{{topic.content1}}</h2>
 
-          <div *ngIf="topic.id === 'introduction1'">
+          <!-- make conditional as a list so we can have the same html outline for multiple -->
+          <div *ngIf="topic.id === '0'">
+            <h1> CONDITIONAL WORKS </h1>
+            <textarea class="input" id="message"
+            (keyup.enter)="Send($event.target.value, topic.id)" >{{(c0 | async)?.content}}</textarea>
+          </div>
+
+          <div *ngIf="topic.id === '1'">
           <h1> CONDITIONAL WORKS </h1>
-          <textarea class="input"></textarea>
-           </div>
+          <textarea class="input" id="message"
+          (keyup.enter)="Send($event.target.value, topic.id)">{{(c1 | async)?.content}}</textarea>
+            </div>
 
       </h1>
     </ul>
+
 </div>
+
+
+
+<!-- <div id="details-wrapper" >
+    <ul >
+        <h1 *ngFor="let topic of topics">
+            <h2 class="text">{{topic.content1}}</h2>
+
+            make conditional as a list so we can have the same html outline for multiple
+            <div *ngIf="topic.id === '0'">
+              <h1> CONDITIONAL WORKS </h1>
+              <textarea class="input" id="message"
+              (keyup.enter)="Send($event.target.value, topic.id)" >{{(c0 | async)?.content}}</textarea>
+            </div>
+
+            <div *ngIf="topic.id === '1'">
+            <h1> CONDITIONAL WORKS </h1>
+            <textarea class="input" id="message"
+            (keyup.enter)="Send($event.target.value, topic.id)">{{(c1 | async)?.content}}</textarea>
+              </div>
+
+        </h1>
+      </ul>
+
+  </div> -->
+
+
+

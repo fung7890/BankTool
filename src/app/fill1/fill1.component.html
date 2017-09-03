@@ -2,9 +2,17 @@
 
 
 
-  <md-sidenav-container class="example-container">
-    <md-sidenav #sidenav class="example-sidenav" align="end" mode = "push">
+  <md-sidenav-container class="example-container" style="background-color: white">
+    <md-sidenav #sidenav class="example-sidenav" align="end">
+
         <router-outlet></router-outlet>
+
+        <div class="back">
+            <button type="button"
+              md-button (click)="sidenav.close()"> BACK
+            </button>
+          </div>
+
     </md-sidenav >
 
     <div class="adjust">
