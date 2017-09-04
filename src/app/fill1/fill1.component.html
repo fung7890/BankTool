@@ -3,13 +3,13 @@
 
 
   <md-sidenav-container class="example-container" style="background-color: white">
-    <md-sidenav #sidenav class="example-sidenav" align="end">
+    <md-sidenav #sidenav class="example-sidenav" align="end" (close)="closing()">
 
         <router-outlet></router-outlet>
 
         <div class="back">
             <button type="button"
-              md-button (click)="sidenav.close()"> BACK
+              md-button (click)="sidenav.close()" routerLink = "./"> BACK
             </button>
           </div>
 
@@ -17,11 +17,23 @@
 
     <div class="adjust">
     <ul>
-        <button class="list-group-item" type="button"
-        md-button (click)="sidenav.open()" *ngFor="let topic of topics"
+      <div *ngFor="let topic of topics" >
+        <button  class="button" type="button"
+        md-button (click)="sidenav.open()"
           [routerLink] = "[topic.id]"
-          > {{topic.title}}
+          routerLinkActive="buttonClick"
+          [routerLinkActiveOptions]="{exact: true}"
+          > <p class="titlePos">{{topic.title}}</p>
+          <p class="rel">Relevance:</p>
+            <div class="lions">
+              <div *ngIf="topic.rel === 3"> <img src="../../assets/Rel.png" height="65"> <img src="../../assets/Rel.png" height="65">
+                <img src="../../assets/Rel.png" height="65"> </div>
+              <div *ngIf="topic.rel === 2"> <img src="../../assets/Rel.png" height="65"> <img src="../../assets/Rel.png" height="65"> </div>
+              <div *ngIf="topic.rel === 1"> <img src="../../assets/Rel.png" height="65"> </div>
+            </div>
         </button>
+        <br>
+      </div>
     </ul>
     </div>
 

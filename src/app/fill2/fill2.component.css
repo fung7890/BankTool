@@ -5,7 +5,7 @@
   position: fixed;
   height: 100%;
   z-index: 1;
-  border: 2px solid #000000;
+  border: solid 2px #1955e5;
 }
 
 h2 {
@@ -17,8 +17,8 @@ h2 {
   height: 300px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: 2px solid #000000;
-  border-radius: 4px;
+  border: solid 2px #1955e5;
+  border-radius: 3px;
   background-color: #f8f8f8;
   resize: none;
 }
@@ -52,6 +52,33 @@ input#message {
 }
 
 img {
-  display:block;
-  margin-bottom:12px;
+  position: relative;
+  float: right;
+
+}
+
+.well{
+  background-color: #F8F7F2;;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.text{
+  font-size: 18px;
+  font-style: OpenSans;
+  color: #68707d;
+  overflow: hidden;
+}
+
+.topText{
+  font-size: 18px;
+  font-style: OpenSans;
+  color: #1955e5;
+  top: 190px;
+
+}
+
+.topSegment{
+  position: relative;
+  top: 50px;
 }

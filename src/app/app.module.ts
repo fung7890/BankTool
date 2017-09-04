@@ -15,6 +15,7 @@ import { MaterialModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { DataService } from './data.service';
 
 
 
@@ -22,7 +23,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 const routes = [
 
   { path: 'overview', component: OverviewComponent},
-  { path: ':subject', component: Fill1Component, children: [
+  { path: 'overview/:subject', component: Fill1Component, children: [
     {path: ':id', component: Fill2Component}
   ]},
   {path: '**', redirectTo: '/overview'}
@@ -57,7 +58,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [TopicsService],
+  providers: [TopicsService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,17 @@
 <div id="details-wrapper" >
     <ul >
         <h1 *ngFor="let topic of topics">
-            <h2 class="text">{{topic.content1}}</h2>
+
+            <div class="topSegment">
+              <h2 class="topText">{{topic.content1}}</h2>
+
+              <div class="well well-sm" *ngIf="status">
+                <p class="text"><img src="../../assets/lion.PNG"><br>{{topic.pa}}</p>
+
+              </div>
+
+
+
 
             <div *ngIf="topic.id === '0'"><textarea class="input" id="message"
               (keyup.enter)="Send($event.target.value, topic.id)" >{{(c0 | async)?.content}}</textarea></div>
@@ -66,7 +76,7 @@
             <div *ngIf="topic.id === '20'"><textarea class="input" id="message"
               (keyup.enter)="Send($event.target.value, topic.id)">{{(c20 | async)?.content}}</textarea></div>
 
-
+            </div>
 
         </h1>
       </ul>

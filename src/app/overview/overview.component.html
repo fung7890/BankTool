@@ -10,11 +10,9 @@
 
 <button class="list-group-item" type="button"
  *ngFor="let subject of subjects"
-  routerLink = "../{{subject}}">
+  routerLink = "./{{subject}}">
   {{subject}}
 </button>
 
 
-<md-slide-toggle (change)="onChange()" [color]="'primary'" >
-Slide me!
-</md-slide-toggle>
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output  } from '@angular/core';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  status: boolean;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.curentStatus.subscribe(status => this.status = status);
   }
 
+  onChange(changedStatus: boolean) {
+    this.data.changeStatus(changedStatus);
+  }
 }

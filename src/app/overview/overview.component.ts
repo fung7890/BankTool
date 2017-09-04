@@ -8,7 +8,7 @@ import { Component, OnInit, EventEmitter, Input, Output  } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
-  @Output() changed = new EventEmitter<boolean>();
+  @Output() changed = new EventEmitter<string>();
 
 
   subjects = [
@@ -27,7 +27,7 @@ export class OverviewComponent implements OnInit {
   }
 
   onChange(){
-    console.log('toggled');
+    this.changed.emit('emit working');
   }
 
 

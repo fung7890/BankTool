@@ -18,15 +18,71 @@
 }
 
 .example-sidenav {
-  padding: 48%;
+  padding: 25%;
 }
 
 .adjust{
   position: relative;
-  top: 30px;
+
+  top: 70px;
 }
 
 .back{
   position: absolute;
+  bottom: 50px;
   z-index:1;
 }
+
+.button{
+  display: block;
+  width: 800px;
+  height: 140px;
+  background-color: white;
+  border: groove 0.5px #95989a;
+
+
+
+
+  font-style: OpenSans;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1955e5;
+  text-align: left;
+}
+
+.buttonClick{
+  display: block;
+  width: 800px;
+  height: 140px;
+  background-color: #4677ea;
+  border: groove 0.5px #95989a;
+
+  font-style: OpenSans;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left;
+}
+
+.titlePos{
+  position: relative;
+  top: 10px;
+}
+
+.rel{
+  position: relative;
+  top: 25px;
+  font-size: 15px;
+}
+
+.lions{
+  position: relative;
+  bottom: 35px;
+  left: 95px;
+
+}
+
+img.resize {
+  height: 5px;
+}
+

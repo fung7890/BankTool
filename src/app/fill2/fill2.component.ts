@@ -8,6 +8,7 @@ import { Fill1Component } from './../fill1/fill1.component';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
+import { DataService } from '../data.service';
 
 
 
@@ -50,9 +51,11 @@ export class Fill2Component implements OnInit {
   topics= [];
   id: any;
   subjects: any;
+  status: boolean;
+  pa = [];
 
   constructor(activatedRoute: ActivatedRoute, topicsService: TopicsService,
-    public af: AngularFireDatabase) {
+    public af: AngularFireDatabase, private data: DataService) {
     this.activatedRoute = activatedRoute;
     this.topicsService = topicsService;
     this.c0 = af.object('/topics/0');
@@ -80,6 +83,8 @@ export class Fill2Component implements OnInit {
 
   ngOnInit() {
 
+    this.data.curentStatus.subscribe(status => this.status = status);
+
     this.activatedRoute.params.subscribe(
       (params) => {
         this.topics = this.topicsService.getIDs(params.id);
@@ -92,7 +97,9 @@ export class Fill2Component implements OnInit {
 
   Send(desc: string, subjectId: string) {
     this.af.object('/topics/' + subjectId).update({ content: desc});
+    console.log(this.status);
   }
+
 
 
 

@@ -1,7 +1,7 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { OverviewComponent } from './../overview/overview.component';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { Location } from '@angular/common';
 import { TopicsService } from './../topics.service';
 import { ActivatedRouteSnapshot } from '@angular/router';
@@ -17,7 +17,7 @@ export class Fill1Component implements OnInit {
 
   topics = [];
 
-  constructor(activatedRoute: ActivatedRoute, topicsService: TopicsService) {
+  constructor(activatedRoute: ActivatedRoute, topicsService: TopicsService, private router: Router) {
     this.activatedRoute = activatedRoute;
     this.topicsService = topicsService;
    }
@@ -30,5 +30,9 @@ export class Fill1Component implements OnInit {
       }
     );
 
+  }
+
+  closing(){
+    this.router.navigate(['./'], {relativeTo: this.activatedRoute});
   }
 }
